@@ -1,0 +1,131 @@
+# ~~~ Music Console ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+#                                                              #
+# Copyright © 2013-2016 GhettoGirl                             #
+#  ~ github.com/GhettoGirl                                     #
+#                                                              #
+# LICENSED UNDER THE GNU GENERAL PUBLIC LICENSE VERSION 3      #
+#                                                              #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+
+[everything before]
+
+ Private, never released!
+ Don't ask for source code or change log.
+
+
+0.45-7
+======
+
+ × Initial public release
+
+
+0.45-8
+======
+
+ × Add ability to read tags at startup
+ × Code clean up
+
+
+0.50-1
+======
+
+ × Better player handling
+   ~ removed extra '_args' keys
+   ~ %f is replaced with file path
+ × Player overrides per file type
+   Example: ext_player=PlayerForExt -args %f
+
+
+0.50-2
+======
+
+ × Fixed 'exit' command
+   Application cleans up probably now
+ × Improved the command line history manager a bit
+
+
+0.50-3
+======
+
+ × Bug fix: 'exit' command string not loaded from config file
+
+
+0.51-1
+======
+
+ × New: media cache which holds all the tags so they must not be re-read all the time
+        this significantly improves startup times and general performance
+   
+   the media cache recreates the cached file if the original file has changed on disk
+
+ × Change: config->readtagsatstartup now defaults to true
+           the first startup takes a lot of time, let it work and create the cache
+
+   it is recommended to leave this setting on, since it improves the search algorithm
+
+
+0.52-1
+======
+
+ × Improved the media cache
+   Now it stores everything except the file path. This heavily improves the startup time.
+   
+   REMOVE YOUR OLD CACHE DIRECTORY BEFORE UPDATING!
+   ~/.config/GhettoGirl/Music Console/cache
+
+ × Removed the ability to disable tag reading at startup
+   Let the application create its cache for the first time and enjoy fast startups afterwards.
+   
+ × Some code cleanup
+   Removed some unnecessary variables
+
+
+0.53-1
+======
+
+ × New filter command |wg (without genre)
+   Filter out tracks which matches the given genre
+
+ × Updated Media structure and the media cache
+   
+   REMOVE YOUR OLD CACHE DIRECTORY BEFORE UPDATING!
+   ~/.config/GhettoGirl/Music Console/cache
+
+ × Performance improvements in the search algorithm
+
+
+0.53-2
+======
+
+ × Improved the RNG a bit
+   There was a very rare chance, that the RNG returned the same number twice in a row.
+   This can become very annoying if you 'shuffle' through you library and hear the
+   same song twice. This behavior is now fixed, by storing the last number and add a
+   check, which generates a new number if it maches the last one :)
+
+
+0.53-3
+======
+
+ × Updated default file type filters
+
+
+0.53-4
+======
+
+ × Minor Improvements
+ × Fixed a typo in the README
+
+
+0.53-5
+======
+
+ × Minor code cleanup
+
+
+0.53-6
+======
+
+ × Several code cleanups
+ × Change of coding style
+

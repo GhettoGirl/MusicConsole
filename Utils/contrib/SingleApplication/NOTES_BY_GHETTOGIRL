@@ -1,0 +1,17 @@
+I've modified this class a little bit to fit my needs.
+
+New:
+ void printInstanceRunningMessage() const;
+ 
+ signal(SIGHUP, SingleApplicationPrivate::terminate);
+
+
+Print a message, when the user tries to execute an additional instance of the application.
+
+In my case it's the header text and a notification about a running instance ;)
+
+Also terminate application if the parent process ( which is a terminal emulator ) dies.
+
+
+Original available at
+ https://github.com/itay-grudev/SingleApplication

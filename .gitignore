@@ -1,0 +1,18 @@
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+
+# ignore backup files
+*~
+*.bak
+
+# ignore .autosave files from Qt Creator
+*.autosave
+
+# ignore .pro.user files from Qt Toolchain
+*.pro.user*
+
+# ignore moc files
+moc_*.cpp
+
+# ignore local libraries (for testing purposes only)
+contrib/
